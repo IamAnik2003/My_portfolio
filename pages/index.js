@@ -75,7 +75,7 @@ export default function Home() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   // Scroll to portfolio function
   const scrollToPortfolio = () => {
@@ -262,7 +262,7 @@ export default function Home() {
               </div>
 
               <p className="text-md py-5 leading-8 text-gray-800 dark:text-gray-200 max-w-xl mx-auto md:text-xl">
-                Freelance Designer & Developer Open for work – build sleek designs and functional code to bring your ideas to life. Let's collaborate and create something amazing!
+                Freelance Designer &amp; Developer Open for work – build sleek designs and functional code to bring your ideas to life. Let&apos;s collaborate and create something amazing!
               </p>
 
               <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600 dark:text-gray-400">
@@ -292,14 +292,17 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Responsive Profile Image */}
+              {/* Fixed Profile Image */}
               <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 relative overflow-hidden mt-10 md:mt-20">
-  <Image
-    src="/dp.jpg" 
-    alt="Anik Sarkar" 
-    className="w-full h-full object-cover"
-  />
-</div>
+                <Image 
+                  src={dp}
+                  alt="Anik Sarkar"
+                  fill
+                  className="object-cover"
+                  priority
+                  sizes="(max-width: 640px) 192px, (max-width: 768px) 240px, (max-width: 1024px) 288px, 384px"
+                />
+              </div>
             </div>
           </section>
 
@@ -308,7 +311,7 @@ export default function Home() {
               <h3 className="text-3xl py-1 dark:text-white">Portfolio</h3>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                 Since the beginning of my journey as a freelance designer and
-                developer, I've created multiple projects for both business and consumer use.
+                developer, I&apos;ve created multiple projects for both business and consumer use.
               </p>
               <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-200">
                 I offer a wide range of services, including brand design,
@@ -322,9 +325,8 @@ export default function Home() {
                 </h1>
                 <Image
                   className="rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
+                  width={500}
+                  height={300}
                   src={web1}
                   alt="Link Management App"
                 />
@@ -335,9 +337,8 @@ export default function Home() {
                 </h1>
                 <Image
                   className="rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
+                  width={500}
+                  height={300}
                   src={web2}
                   alt="Meeting Management App"
                 />
@@ -348,9 +349,8 @@ export default function Home() {
                 </h1>
                 <Image
                   className="rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
+                  width={500}
+                  height={300}
                   src={web3}
                   alt="Pocket Notes App"
                 />
@@ -361,9 +361,8 @@ export default function Home() {
                 </h1>
                 <Image
                   className="rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
+                  width={500}
+                  height={300}
                   src={web4}
                   alt="Calculator App"
                 />
@@ -374,9 +373,8 @@ export default function Home() {
                 </h1>
                 <Image
                   className="rounded-lg object-cover hover:scale-105 transition-transform duration-300"
-                  width={"100%"}
-                  height={"100%"}
-                  layout="responsive"
+                  width={500}
+                  height={300}
                   src={web5}
                   alt="Rock Paper Scissors Game"
                 />
