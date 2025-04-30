@@ -294,7 +294,7 @@ export default function Home() {
 
               {/* Responsive Profile Image */}
               <div className="mx-auto bg-gradient-to-b from-teal-500 rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 xl:w-96 xl:h-96 relative overflow-hidden mt-10 md:mt-20">
-  <img 
+  <Image
     src="/dp.jpg" 
     alt="Anik Sarkar" 
     className="w-full h-full object-cover"
